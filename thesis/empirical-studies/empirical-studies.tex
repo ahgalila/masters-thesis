@@ -1,0 +1,19 @@
+\chapter{Empirical Studies} \label{sec:empirical-studies}
+
+This chapter presents the empirical studies conducted to investigate and verify the theory and hypothesis laid out in the previous chapter. The objectives of these experiments are to show that deep recurrent neural networks can learn to perform basic arithmetic and that the presence of shared symbols improves the accuracy of these networks when trained using an impoverished dataset. Moreover, we aim to show that the symbolic information presented to the models during training perform the same role that the symbolic knowledge shared between human learners performs. We do this by showing that in the presence of symbols, artificial neural networks are able to discover an algorithm that generalizes to all instances of the problem.
+
+Our experimentations are divided into three groups based on the overall objective of the experiments. The first set of experiments presented in Section \ref{sec:empirical-studies-sequential-models-experiments} aims to prove our hypothesis by comparing the effectiveness of recurrent neural networks trained in the presence of symbols with that of the same networks trained without symbols. The second experimental group described in Section \ref{sec:empirical-studies-explaining-the-role-of-symbols} is meant to explain the role that symbols play in improving a model's accuracy. Finally, Section \ref{sec:empirical-studies-temperature-encoding-experiments} presents  experiments that show how symbols allow the recurrent neural networks to learn an algorithm that captures a general solution to the problem of learning mathematical operations. 
+
+We begin this chapter by providing a general overview of how the experiments are conducted and how the results are compared. Next, we describe the technology and environment on which we developed and executed our experiments. Then we present our experiments, laying out in detail the objective, methodology and results of each experiment. A discussion is provided after each experiment analyzing the results and comparing them to that of previous experiments. In the next and final chapter we provide a summary of the outcomes of our research and how it can be further developed.
+
+\input{empirical-studies/experimental-process-and-model-evaluation/experimental-process-and-model-evaluation}
+
+\input{empirical-studies/environment/environment}
+
+\input{empirical-studies/sequential-models-experiments/sequential-models-experiments}
+
+\input{empirical-studies/explaining-the-role-of-symbols/explaining-the-role-of-symbols}
+
+\input{empirical-studies/temperature-encoding-experiments/temperature-encoding-experiments}
+
+\input{empirical-studies/summary/summary}

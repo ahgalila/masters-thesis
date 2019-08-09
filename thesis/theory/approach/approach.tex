@@ -1,0 +1,43 @@
+\section{Approach} \label{sec:theory-approach}
+
+To demonstrate the validity of the hypothesis presented above, we constructed several deep neural network models that learn to do basic arithmetic operations (namely addition, subtraction, multiplication and division) on images of handwritten digits. When properly trained, using sufficient training examples, the models can be presented with images of handwritten digits sampled from the dataset, and perform an arithmetic operation using the values depicted in the images provided.
+
+We use the MNIST dataset to train and test our models. The MNIST dataset is a set of images depicting handwritten digits that are commonly used by image processing researchers\cite{MNIST}. Each image represents a single digit. Section \ref{sec:theory-approach-the-mnist-dataset} provides further details on the MNIST dataset. Figure \ref{fig:noisy-mnist} shows examples of the handwritten digits used from zero to nine. We refer to this type of input as noisy since there is no consistent way for rendering each digit. 
+
+\begin{figure}[t]
+	\centering
+	\includegraphics[max width=\textwidth]{one-hot-vector}
+	\caption{Two one-hot vectors are depicted, (a) is a one-hot vector representing the integer two and (b) is another one-hot vector of the integer eight.}
+	\label{fig:one-hot-vector}
+\end{figure}
+
+\begin{figure}[t]
+	\centering
+	\includegraphics[max width=\textwidth]{noisy-mnist}
+	\caption{Example of noisy handwritten digits sampled from the MNIST dataset.}
+	\label{fig:noisy-mnist}
+\end{figure}
+
+The models are trained to output a set of one-hot vectors. One-hot vectors are vectors that have all their values set to zero except for the value corresponding to the category being represented, which is set to one. Figure \ref{fig:one-hot-vector}(a) shows an example of a one-hot vector for the number two and \ref{fig:one-hot-vector}(b) shows another example of a one-hot vector for the number eight.
+
+Alongside the noisy handwritten digit inputs, the models are also provided a clear symbolic channel. This channel is analogous to the common language shared by human learners. The presence of symbolic inputs on this channel are controlled during training to investigate their effect on the accuracy of the network model when tested on noisy data only. Testing was performed without symbolic information to simulate the behavior of an independent agent that interacts with other agents. Our expectation is that models trained without the presence of symbols on an impoverished dataset will perform poorly on an independent test set. However, by gradually increasing the number of symbols provided during training, the model's performance should also gradually increase. Given the sequential nature of performing arithmetic operations, recurrent neural networks, like the one depicted in Figure \ref{fig:sequential-model-arithmetic}, specifically those based on long short-term memory (LSTM) units, will be used to investigate this theory. These networks will be discussed in detail in Section \ref{sec:theory-approach-methodology}.
+
+Besides showing that the symbols help in improving the accuracy of the trained neural networks, we also want to establish an analogy between the role that symbols play in human learning and their role in improving the performance of artificial neural network models. In human learning, teachers use symbolic information in the form of examples that the learner is already familiar with to teach the learner a general method by which the learner can solve a specific problem.
+
+Take teaching arithmetic to children for example. When teaching children how to add or divide numbers, a teacher uses objects the child is already familiar with, like apples for example, and shows the child how to relate a quantity of apples to a digit. The teacher then builds on that concept of quantity to show the learner how to add by counting one group of apples and then continue counting the other group, and how to divide by distributing the apples evenly into containers. Over time, the children gain the ability to generalize these techniques to quantities and numbers they have not encountered during learning. Symbols allow the learner to move beyond memorizing inputs and their corresponding outputs, to learn an actual algorithm that represents a general solution to the problem.
+
+We would like to show that just as in human learning, clear symbols can expedite the learning process in artificial neural networks so as to more accurately perform arithmetic operations and provide a general solution to the problem. To show that this is possible, some of our experiments are trained on a subset of digit combinations. The independent test set is composed of combinations of digits that are not encountered during training. When the models perform well on the unseen combinations we can conclude that the artificial model has indeed learned the general arithmetic rule and is not simply doing pattern matching. 
+
+Given the above, our goals are:
+\begin{itemize}
+	\item To show that it is possible to develop a deep recurrent neural network model that can learn to perform all four basic arithmetic operations (addition, subtraction, multiplication and division) more effectively with the presence of symbols than without.
+	\item To explain the role that symbols play in teaching arithmetic to a machine learning system by showing that the neural network models are able to discover a principled algorithm as opposed to simply memorizing input and output patterns.
+\end{itemize}
+
+In the following sections, we describe the various network architectures and learning techniques that will be used in exploring this theory. Chapter 4 provides a detailed description of the empirical studies performed along with the results and a discussion.
+
+\input{theory/approach/the-mnist-dataset/the-mnist-dataset}
+
+\input{theory/approach/multimodal-learning/multimodal-learning}
+
+\input{theory/approach/methodology/methodology}

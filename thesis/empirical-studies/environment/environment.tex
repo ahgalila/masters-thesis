@@ -1,0 +1,26 @@
+\section{Environment} \label{sec:empirical-studies-environment}
+
+Here we describe the hardware and software environments that were used to develop, train and test the neural network models used in the experiments discussed later in this chapter. Typically, the amount of hardware resources needed increases with the size of our datasets\cite{Bengio07scalinglearning}. Since we are deliberately training these neural network models on limited datasets, common off the shelf laptop or desktop computers can be used to replicate these experiments.
+
+All of our models were developed and trained on a laptop with the following specs:
+\begin{itemize}
+	\item Make and model: Apple MacBook Pro (Early 2015)
+	\item CPU: 2.7 GHz Intel Core i5
+	\item Memory: 8 GB 1867 MHz DDR 3
+	\item Storage: 120 GB Flash Storage
+\end{itemize}	
+All experiments were validated using k-fold cross-validation where k is set to 5. This means that each experiment was repeated five times. The time it took to run each experiment varied depending on the type of dataset used. The combined average time for all five attempts of the experiments based on images of handwritten digits was around ten hours. The average time for the experiments based exclusively on symbols was about one hour.
+
+With regards to the software technology used:
+\begin{itemize}
+	\item Python 2.7 is used to code the scripts that construct, train and test the neural network models.
+	\item NumPy is a Python library that allows Python's numerical datatypes to represent real numbers with higher precision. It also extends the capabilities of Python's lists to allow for matrix manipulation. TensorFlow and Keras depend on NumPy for their internal workings.
+	\item TensorFlow is a native library with a Python wrapper that allows programmers to express mathematical processes like matrix multiplication and gradient descent training in the form of a process graph which Tenserflow can then offload to either a CPU or GPU for execution. Expressing algorithms using process graphs allows the neural network architectures being developed to be abstracted from specific implementations that target CPU or GPU powered machines and therefore enables TensorFlow to optimize the underlying implementation based on the resources available.
+	\item Keras is an API that provides neural network developers the ability to specify architectures as well as hyper parameters to TensorFlow without having to manually program these constructs from scratch. This allows researchers to experiment with their theories without worrying about the validity of their implementations.
+\end{itemize}	
+
+Alongside the above technologies, the following were also used to format and analyze the results:
+\begin{itemize}
+	\item Microsoft Excel is used to compile and analyze the results as well as generate the charts presented in the coming sections.
+	\item PIL is a Python library that allows developers to generate images. The images included in the sections providing qualitative analysis of our models are generated using PIL.
+\end{itemize}

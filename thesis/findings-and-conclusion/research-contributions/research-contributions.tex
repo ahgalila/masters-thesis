@@ -1,0 +1,9 @@
+\section{Research Contributions} \label{sec:findings-and-conclusion-research-contributions}
+
+This section lists contributions from our research that we believe to be novel and of significant interest.
+
+\begin{itemize}
+	\item Symbols that are presented on the network's output are as effective as those presented as an input to the neural network. Experiment 1 in Section \ref{sec:experiment-1} showed that the mean accuracy of the models trained with explicit symbols (NS), implicit symbols (NC) and both (NX) are statistically similar.
+	\item The encoding used to represent symbols has a significant impact on the utility of the symbols and the overall effectiveness of the model. When we contrast the results obtained from Experiment 4 in Section \ref{sec:experiment-4} (one-hot vector symbols) with the ones obtained from Experiment 7 in Section \ref{sec:experiment-7} (temperature encoded symbols), not only do the models trained using temperature encoded symbols show significant improvement on the unseen test set, they also show slight improvement on the seen test set.
+	\item Training neural networks with the aid of symbols takes more time than without the aid of symbols, contrary to our expectations. In Section \ref{sec:experiment-3}, we attributed this outcome to the possibility that it takes longer for the learning algorithm to find a suitable set of weights that fits both the symbolic data and the noisy handwritten digits.
+\end{itemize}

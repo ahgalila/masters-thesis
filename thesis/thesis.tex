@@ -1,0 +1,31 @@
+
+%--------------------------------------------------------------------------
+% THESIS: The MAIN thesis file from which all other things are included.
+%--------------------------------------------------------------------------
+
+% Include the header which includes packages, the Acadia style and definitions.
+\include{header}
+
+\begin{document}
+
+    % PRELIMINARIES: This is the file you will use to setup your
+    % name, date, advisor, etc. 
+    \include{preliminaries}
+
+    % CHAPTER CONTENT START
+    % Replace all the lines from here down to ``CHAPTER CONTENT END''
+    % with a collection of ``\include{XYZ}'' lines, where each such XYZ
+    % is the name of a text file holding (for example) one chapter of
+    % your thesis.
+    % If you have appendices you need that ``\appendix'' line BEFORE
+    % you \include your appendices.
+    \include{introduction/introduction}
+    \include{background/background}
+    \include{theory/theory}
+    \include{empirical-studies/empirical-studies}
+    \include{findings-and-conclusion/findings-and-conclusion}
+    % APPENDICES
+    % CHAPTER CONTENT END
+
+    \bibliography{thesisbib}
+\end{document}

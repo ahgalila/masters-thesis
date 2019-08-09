@@ -1,0 +1,10 @@
+\section{Future Work} \label{sec:findings-and-conclusion-future-work}
+
+This final section suggests potential avenues for future development.
+
+\begin{itemize}
+	\item We focused our experimental efforts on training recurrent neural networks in the presence of symbols to learn arithmetic using images of handwritten digits. Future work can consider applying this theory of learning with symbols to other application domains. Specifically, natural language processing or medical imagery.
+	\item Further qualitative investigations can be made similar to the ones presented in Experiment 5 in Section \ref{sec:experiment-5} and Experiment 6 in \ref{sec:experiment-6} to understand the development of algorithms in the neural network representation for operators other than addition.
+	\item Our experiments used sequences of two operands. More experiments can be done to investigate the theory on longer sequences of operands. Specifically, experiments can be conducted to understand how the network would behave when the carry signal for addition would have to be carried over more than one place. Our current setup of using reverse Polish notation, although was not necessary for the experiments presented here, should eliminate the need for taking operator precedence into account.
+	\item Instead of using recurrent neural networks and adding a symbolic channel, a feed forward neural network trained using a context sensitive multi-task learning (csMTL) approach like the one presented by Poirier and Silver\cite{silver2007context} could be investigated. The context input can be used to configure the network to either perform classification on the inputs or perform the operation. Our belief is the symbolic representation would be acquired implicitly by the network by learning to classify the operands within the one csMTL network.
+\end{itemize}

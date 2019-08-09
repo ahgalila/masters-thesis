@@ -1,0 +1,13 @@
+\chapter{Theory} \label{sec:theory}
+
+In Section \ref{sec:background-problem-local-minima} we discussed how deep neural networks suffer from the problem of local minima. Due to the complex nature of deep architectures, the error surface includes many peaks and valleys. The gradient descent algorithm is therefore more likely to converge on to one of these local minima as opposed to the desired global minimum\cite{Larochelle:2009:EST:1577069.1577070}. Typically, this problem is overcome by providing more training examples with more variety to the learning algorithm. In contrast, human learners build on the knowledge they accumulate over their lifetimes and therefore related tasks require fewer examples to learn\cite{Thrun1998}. 
+
+Individuals in a society can also benefit from the knowledge accumulated over generations through language that can symbolize this knowledge. By sharing these symbols, learning in humans becomes less expensive and more effective\cite{DBLP:journals/corr/abs-1203-2990}. The goal of our research is to demonstrate that this form of symbolic knowledge transfer can be emulated in artificial neural networks to improve the accuracy of training.
+
+This chapter starts by presenting our theory of learning with symbols and how it relates to deep neural networks and multi-task learning. We then discuss previous work that provided the inspiration to our approach. Finally, we outline the problem domain and the methodology we propose to empirically test our theory.
+
+\input{theory/hypothesis/hypothesis}
+
+\input{theory/approach/approach}
+
+\input{theory/summary/summary}

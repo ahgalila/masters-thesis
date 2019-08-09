@@ -1,0 +1,11 @@
+\subsection{Methodology} \label{sec:theory-approach-methodology}
+
+In this section we discuss the progression of our theory development. We provide a general overview of the neural network architectures that we are using as well as the rationale for using these architectures. There are three stages to the development of our theory. We start by describing the first stage which involves using sequential LSTM networks to perform the arithmetic operations on handwritten digits. We also discuss various techniques of supplying the symbols to our models and contrast the effectiveness of these techniques. Next, we discuss the second stage which attempts to explain the role that symbols play in improving the effectiveness of our models. Specifically, we would like to show that the networks that are trained using symbols are capable of discovering an algorithm that generalizes to all combinations of digits, instead of simply doing pattern matching, as is the goal presented above. Finally, we describe the third stage of theory development where a different representation of our symbolic channel produces the best results.
+
+\input{theory/approach/methodology/sequential-models/sequential-models}
+
+\input{theory/approach/methodology/symbol-channels/symbol-channels}
+
+\input{theory/approach/methodology/pattern-matching-vs-learning-an-algorithm/pattern-matching-vs-learning-an-algorithm}
+
+\input{theory/approach/methodology/temperature-encoding/temperature-encoding}

@@ -1,0 +1,22 @@
+\section{Hypothesis} \label{sec:theory-hypothesis}
+
+Chapter 1 discussed how it can be expensive and risky for an individual human learner to acquire a clear understanding of their environment purely through experimental trial and error. We believe that learning in individual humans is hampered by challenges of observing sufficient numbers of training examples, but accelerated by the occasional sharing of knowledge in the form of symbols.
+
+Human societies develop languages and communication techniques that allow individuals to share knowledge with one another in a clear and concise manner\cite{DBLP:journals/corr/abs-1203-2990}. This shared knowledge introduces inductive bias in the way humans think and in turn, helps the individual human learner gain a better understanding of the problem or environment\cite{Thrun1998}. This understanding allows the learner to develop more optimal solutions. We call this shared knowledge, symbolic knowledge or simply symbols.
+
+Artificial neural networks also experience difficulty in discovering the desired decision function when training with a limited dataset. This is due to the existence of many local minima in the error function. Just as humans overcome this difficulty with the aid of clear symbols, through interactions with other individuals, we hypothesize that the introduction of a clear symbol channel to an artificial neural network will also help the artificial model overcome the challenge of training with a small dataset and improve the model's overall accuracy on test data.
+
+In the context of this research, \textbf{symbols} are defined as \textit{clear, concise and consistent external representations of a concept that captures its key regularities and is meant to be shared between learning agents}. For example, when considering handwritten digits like those found in the MNIST dataset, discussed in \ref{sec:theory-approach-the-mnist-dataset}, there are a wide variety of examples of the same digit. The existence of these many variations makes handwritten digits noisy and in order for a neural network to successfully classify these inputs, the network must learn the important features that are common among all variations of each digit and filter out the noise. In contrast, a symbol for a concept shared by learning agents, such as the digit ``2", must have a consistent representation that captures the key regularities of the concept. Examples of symbolic representations can be a one-hot vector or an image rendered using a standard font.
+
+We believe that learning a concept task from noisy inputs can benefit from learning the same task from clear and consistent symbols of the same concept.  Representation created in the layers for mapping the symbolic inputs to outputs that correctly identify the concept can be used as a scaffold for mapping the noisy inputs to the same outputs. In this way, the weight updates associated with the symbolic inputs guide the backpropagation algorithm to areas of weight space that have fewer suboptimal local minima. The weight updates associated with the noisy inputs will piggy back on the movement along this trajectory because the gradient of the error with respect to the weights will be highest in this direction. This form of inductive bias results in a model that has a higher accuracy than if learned with only the noisy inputs.
+
+\newtheorem*{symbolic-learninig-hypothesis*}{Hypothesis}
+
+\begin{symbolic-learninig-hypothesis*}
+	\label{hypothesis:symbolic-learninig-hypothesis}
+	Similar to how individual human learners overcome the difficulties they encounter while learning a concept from an impoverished dataset, an artificial neural network can overcome the local minima problem by guiding the development of more beneficial internal representations through the use of shared symbols that capture the key regularities of the concept.
+\end{symbolic-learninig-hypothesis*}
+
+Our intention is not to discover the mechanism by which human learners use symbols to develop more accurate representations of concepts, rather it is to determine if the introduction of such symbols can assist machine learning systems in developing more accurate representations. We would like to determine how neural networks can take advantage of symbols, however if found, we will make no claim as to the same mechanism being part of human learning.
+
+\input{theory/hypothesis/multi-task-learning/multi-task-learning}

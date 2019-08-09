@@ -1,0 +1,99 @@
+%---------------------------------------------------------
+% Preliminaries: Set up your own details in this file!
+%----------------------------------------------------------
+
+\title{Learning with Symbols}
+\author{Ahmed Galila}
+\dept{Computer Science}
+\deptOrSchool{Computer Science}
+\degree{Science}
+
+\convocationAndYear{Fall Graduation 2019}
+\defenseDate{June 17, 2019}
+\copyrightYear{2019}
+
+% Use a "~" after the "r." of "Dr." so that TeX doesn't think you have
+% ended a sentence (at which point it gives extra space).
+\chair{Dr.~Rob Raeside}
+\externalReader{Dr.~Thomas Trappenberg}
+\internalReader{Dr.~Greg Lee}
+\supervisor{Dr.~Daniel L.~Silver}
+
+% Remove the '%' from the next line and fill in the name if desired.
+%\cosupervisor{(Dr.~Your Other Supervisor)}
+
+\headOrDirector{Dr.~Darcy Benoit}
+% If the head or director is an ``acting'' head or director, uncomment
+% the next line (i.e., delete the '%'):
+% \justActing
+
+%-------------------------------------------------------------------------
+
+% This outputs the title page, the approval page and the copyright page.
+\firstThreePages
+
+%-------------------------------------------------------------------------
+
+% This outputs the table of contents, lists of figures, tables, ...
+
+\tocAndSuch
+
+%-------------------------------------------------------------------------
+
+\prefacesection{Abstract}
+ 
+The effectiveness of deep neural network models depends on the size and quality of the datasets used to develop these models. Often a lack of sufficient training examples results in the learning algorithm settling into a suboptimal local minima. Individual human learners encounter similar difficulties while learning. However, these challenges are overcome through social interaction and the sharing of learned knowledge in the form of symbols. This thesis presents a hypothesis that states that the presence of clear and concise symbols while training artificial neural networks improves the accuracy of these models when trained on impoverished datasets, similar to how knowledge sharing among humans allows them to overcome their learning difficulties. Empirical studies compare the accuracy of recurrent neural networks, based on long short-term memory units, trained in the presence of symbols with similar networks trained without the benefit of symbols. The models are trained to perform basic arithmetic operations on images of handwritten digits from the MNIST dataset. We try two forms of digit symbol encodings (one-hot and temperature) and compare how well each encoding is able to guide the training process to discover a representation of an algorithm that can generalize to all instances of the problem. The results show that the models trained with the aid of symbols are more effective at performing arithmetic than the models trained without symbols. Furthermore, we show that the temperature encoding of digit symbols are able to capture the quantity and ordinal relationship between the operands and are more effective at discovering an algorithm for each arithmetic operation.
+
+% If you have a list of definitions of abbreviations and symbols used,
+% they can go in here.  You will have to do some hand-coding here, but
+% if you un-comment the next few lines they will give you an idea,
+% depending on how you want to format things.
+
+{\let\cleardoublepage\clearpage\chapter*{Glossary of Terms}}
+
+\begin{itemize}
+	\item Adam Optimizer --- A variation of the gradient descent algorithm that maintains a separate learning rate for each network weight.
+	\item Auto-encoder --- A type of unsupervised neural network that can learn a compressed encoding of the input features.
+	\item Backpropagation Algorithm --- An algorithm that uses gradient descent and the chain rule to determine the weight updates for training multi-layer neural networks.
+	\item Backpropagation Through Time (BPTT) --- A variation of the backpropagation algorithm used to train recurrent neural networks.
+	\item Bias --- Refers to how much a model deviates from the target function due to incorrect assumptions made about the model.
+	\item Constant Error Carousel --- Refers to the recurrent connection in an LSTM unit that allows LSTM networks to learn arbitrary long sequences.
+	\item Contrastive Divergence (CD) --- The algorithm used to train RBMs.
+	\item Cost Function --- A function used by the gradient descent algorithm to determine how much error a model produces.
+	\item Feature Representation --- The way inputs to a neural network are encoded or represented. 
+	\item Graphics Processing Unit (GPU) --- A type of processor with an architecture designed specifically for graphics rendering. They are heavily utilized in machine learning due to their highly parallel computing power.
+	\item Global Minimum --- The smallest value of a function over its entire domain. 
+	\item Gradient Descent Algorithm (GD) --- An algorithm used to calculate the weight updates of a neural network based on the error produced when applying the training data to the network.
+	\item Internal Feature --- The output from the hidden layer nodes of a neural network that is fed into the next layer.
+	\item Internal Representation --- The weights of the internal connections of a neural network.
+	\item Least Significant Digit --- The lowest digit of a number located on the far right of a string representing the number.
+	\item Local Minimum --- The smallest value of a function over a specific range.
+	\item Long Short-Term Memory (LSTM) --- A type of neural network unit used to replace perceptrons in recurrent neural networks (RNNs) that allows RNNs to remember and model long sequences of data.
+	\item MNIST Dataset --- A dataset composed of images of handwritten digits often used by machine learning and computer vision researchers to train handwritten digit classifiers.
+	\item Most Significant Digit --- The highest digit of a number located on the far left of a string representing the number.
+	\item One-Hot Vector --- A type of feature encoding that represents a digit as a vector where all the elements are set to zero except for the element corresponding to the digit being represented which is set to one.
+	\item Ordinal Relationship --- A relationship between numbers that determines whether a number comes before or after another number. 
+	\item Recurrent Neural Network (RNN) --- A type of artificial neural networks that can model temporal data.
+	\item Restricted Boltzman Machine (RBM) --- A type of auto-encoder based on Boltzman Machines where cyclic connections are not allowed.
+	\item Symbol --- A clear, concise and consistent representation of noisy input data. A symbol of a specific concept will have one and only one representation.
+	\item Stochastic Gradient Descent --- A variation of the gradient descent algorithm that updates the weights after every training example is introduced instead of waiting for all training examples to be processed in an epoch.  
+	\item Temperature Encoding --- A type of feature encoding that represents a digit as a vector that has as many values sequentially set to one, starting from the right, as the integer being represented.
+	\item Variance --- Determines how much a model is affected by the training data.
+\end{itemize}
+
+%-------------------------------------------------------------------------
+% Now write your acknowledgements (if any).
+% If you wish to acknowledge no-one, delete or comment-out the
+% next few lines.
+
+%\Acknowledgments
+
+%Place any acknowledgments you might want to make here.
+
+%\noindent
+%Don't forget to be formal and professional.
+
+%-------------------------------------------------------------------------
+
+% Don't mess with this line!
+\afterpreface

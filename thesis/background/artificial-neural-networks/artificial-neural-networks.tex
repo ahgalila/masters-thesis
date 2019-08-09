@@ -1,0 +1,13 @@
+\section{Artificial Neural Networks} \label{sec:background-artificial-neural-networks}
+
+The goal of any machine learning system is to learn a function $\hat{f}$ that approximates a target function $f$. In supervised learning, the approximating function might be a classifier of the form $\hat{f}(x) = y$ that learns to map an input vector $\vec{x}$ to a category $\vec{y}$\cite{Goodfellow-et-al-2016}. For example, a system can be made to classify images of handwritten digits into their corresponding values from zero to nine. In this case, when properly learned, the approximate function will accept a vector ($\vec{x}$) that represents the intensities of each pixel in the image and output a vector ($\vec{y}$) representing the class of the image from zero to nine.
+
+There are four components to any machine learning system. First there is the training data from which the learning system acquires the rules that make up the target function, the target function itself, the target function's representation and finally the learning algorithm that updates the representation's parameters to allow the representation to approximate the target function\cite{Mitchell}. Artificial neural networks are one form of target function representation that are inspired by the nervous systems found in living organisms and form the basis of deep learning models.
+
+Artificial neural networks consist of artificial neurons that are mathematical models of a single neuron in a natural nervous system. These artificial neurons accept weighted inputs and produce an output if the sum of the inputs meet a certain threshold. Many neurons can be linked together to form a network. The goal of the learning algorithm is to find a suitable set of weights, which correspond to the synaptic weights found in natural nervous systems, that allow the network to produce the correct output of the function $f(\vec{x})$ given any input $\vec{x}$ in $f$'s domain. That way, the resulting model is said to represent the target function $f$. The remainder of this section provides a detailed look at neural networks and the learning algorithms associated with them.
+
+\input{background/artificial-neural-networks/the-perceptron/the-perceptron}
+
+\input{background/artificial-neural-networks/feed-forward-neural-networks/feed-forward-neural-networks}
+
+\input{background/artificial-neural-networks/deep-learning/deep-learning}
